@@ -38,14 +38,12 @@ public class Bank implements BankInterface {
 	}
 
 	public void credit(Long accountNumber, double amount) {
-		// complete the function
 		Account account = this.accounts.get(accountNumber);
 		account.creditAccount(amount);
 		this.accounts.put(accountNumber, account);
 	}
 
 	public boolean debit(Long accountNumber, double amount) {
-		// complete the function
 		Account account = this.accounts.get(accountNumber);
 		if (account.debitAccount(amount)) {
 			this.accounts.put(accountNumber, account);
